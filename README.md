@@ -20,11 +20,11 @@ Repositorio con la resolución de los trabajos prácticos de la materia **Progra
 
 ## Datos del alumno
 
-- **Apellido y nombre:** 
-- **Legajo:** 
+- **Apellido y nombre:** Quintanilla Sander
+- **Legajo:** 1229470
 - **Curso / Comisión:** 
 - **Docente:** 
-- **Año:** 
+- **Año:** 2026
 
 ## Objetivo del repositorio
 
