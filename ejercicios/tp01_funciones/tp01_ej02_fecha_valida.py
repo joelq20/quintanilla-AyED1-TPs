@@ -6,3 +6,34 @@
 #programa para verificar el comportamiento de la función
 
 def fecha_valida(dia, mes ,anio):
+
+    if mes < 1 or mes > 12:
+        return False
+
+    bisiesto = False
+
+    if anio % 400 == 0:
+        bisiesto = True
+    elif anio % 100 != 0:
+        if anio % 4 == 0:
+            bisiesto = True
+    if mes == 2:
+        if bisiesto:
+            return dia <= 29
+        else:
+            return dia <= 28
+    if mes == 4 or mes == 6 or mes == 9 or mes == 11:
+        return dia <= 30
+    if mes >= 1 and mes <= 12:
+        return dia <= 31
+
+    return False
+
+dia = int(input("Ingrese el día: "))
+mes = int(input("Ingrese el mes: "))
+anio = int(input("Ingrese el año: "))
+
+if fecha_valida(dia, mes, anio):
+    print("La fecha es válida.")
+else: 
+    print("la fecha no es valida.")
