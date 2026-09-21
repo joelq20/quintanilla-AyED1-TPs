@@ -32,4 +32,9 @@ def viaje_subte(viajes):
     return viajes * final
 
 viajes = int(input("Ingrese la cantidad de viajes realizados en el mes: "))
+
+while viajes < 0:
+    print("La cantidad de viajes no puede ser negativa.")
+    viajes = int(input("Ingrese la cantidad de viajes realizados en el mes: "))
+
 print("El total gastado en el mes es: $", viaje_subte(viajes))

@@ -33,5 +33,12 @@ def calcular_vuel(compra, paga):
 compra = int(input("Ingrese el valor total de la compra: "))
 paga = int(input("Ingrese el dinero recibido: "))
 
+while compra < 0:
+    print("El valor de la compra no puede ser negativo.")
+    compra = int(input("Ingrese el valor total de la compra: "))
+
+while paga < 0:
+    print("El dinero recibido no puede ser negativo.")
+    paga = int(input("Ingrese el dinero recibido: "))
 
 calcular_vuel(compra, paga)

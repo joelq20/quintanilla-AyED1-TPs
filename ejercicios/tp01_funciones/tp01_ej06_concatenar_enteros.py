@@ -12,4 +12,12 @@ def concatenado(a,b):
 a = int(input("Ingrese la primera serie o numero entero positivo: "))
 b = int(input("Ingrese la segunda serie o numero entero positivo: "))
 
+while a <= 0:
+    print("El número debe ser positivo.")
+    a = int(input("Ingrese la primera serie o numero entero positivo: "))
+
+while b <= 0:
+    print("El número debe ser positivo.")
+    b = int(input("Ingrese la segunda serie o numero entero positivo: "))
+
 print(concatenado(a, b))

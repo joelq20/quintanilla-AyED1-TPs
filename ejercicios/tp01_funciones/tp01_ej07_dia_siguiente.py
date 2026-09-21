@@ -8,14 +8,13 @@
 #a. Sumar N días a una fecha.
 #b. Calcular la cantidad de días existentes entre dos fechas cualesquiera
 
-dias = [31,28,31,30,31,30,31,31,30,31,30,31]
-# vuelve a aplicar en parte lo de fechas validad del ejercicio 2
 def diasiguiente(dia,mes,anio):
+    dias = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
     if anio % 400 == 0:
-        dias [1] = 29 
+        dias[1] = 29
     elif anio % 100 != 0 and anio % 4 == 0:
-        dias [1] = 29
+        dias[1] = 29
 
     dia += 1
 
@@ -48,6 +47,10 @@ while opcion != 3:
         año = int(input("Ingrese el año: "))
 
         n = int(input("Ingrese la cantidad de dias que quieras sumar al actual!: "))
+
+        while n < 0:
+            print("La cantidad de días no puede ser negativa.")
+            n = int(input("Ingrese la cantidad de días que quiera sumar: "))
 
         for i in range(n):
             dia, mes, año = diasiguiente(dia, mes, año)

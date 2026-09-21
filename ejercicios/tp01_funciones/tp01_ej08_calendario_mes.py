@@ -31,7 +31,18 @@ def diadelasemana(dia, mes, anio):
 mes = int(input("Ingrese el mes: "))
 anio = int(input("Ingrese el año: "))
 
+while mes < 1 or mes > 12:
+    print("El mes debe estar entre 1 y 12.")
+    mes = int(input("Ingrese el mes: "))
+
+while anio < 1:
+    print("El año debe ser positivo.")
+    anio = int(input("Ingrese el año: "))
+
 dias = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+if anio % 400 == 0 or (anio % 100 != 0 and anio % 4 == 0):
+    dias[1] = 29
 
 inicio = diadelasemana(1, mes, anio)
 cantidad = dias[mes - 1]

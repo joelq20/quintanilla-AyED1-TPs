@@ -6,6 +6,9 @@ lista = []
 
 n = int(input("Ingrese hasta que numero desea calcular los cuadrados: "))
 
+while n < 1:
+    print("Ingrese un número positivo.")
+    n = int(input("Ingrese hasta que numero desea calcular los cuadrados: "))
 
 for i in range(1, n + 1):
     lista.append(i ** 2)

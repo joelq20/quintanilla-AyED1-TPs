@@ -7,7 +7,7 @@
 
 def fecha_valida(dia, mes ,anio):
 
-    if mes < 1 or mes > 12:
+    if dia < 1 or mes < 1 or mes > 12 or anio < 1:
         return False
 
     bisiesto = False
@@ -32,6 +32,12 @@ def fecha_valida(dia, mes ,anio):
 dia = int(input("Ingrese el día: "))
 mes = int(input("Ingrese el mes: "))
 anio = int(input("Ingrese el año: "))
+
+while dia < 1 or mes < 1 or mes > 12 or anio < 1:
+    print("Ingrese una fecha con valores positivos y un mes entre 1 y 12.")
+    dia = int(input("Ingrese el día: "))
+    mes = int(input("Ingrese el mes: "))
+    anio = int(input("Ingrese el año: "))
 
 if fecha_valida(dia, mes, anio):
     print("La fecha es válida.")

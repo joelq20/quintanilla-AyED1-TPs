@@ -73,6 +73,10 @@ def calcular_camiones(aptas, cajones):
 
 cantidad = int(input("Ingrese la cantidad de naranjas cosechadas: "))
 
+while cantidad < 0:
+    print("La cantidad de naranjas no puede ser negativa.")
+    cantidad = int(input("Ingrese la cantidad de naranjas cosechadas: "))
+
 naranjas = generar_naranjas(cantidad)
 
 aptas, jugo = clasificar_naranjas(naranjas)

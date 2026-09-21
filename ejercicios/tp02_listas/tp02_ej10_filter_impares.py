@@ -9,6 +9,10 @@ lista = []
 
 cantidad  = int(input("Ingrese la cantidad de números: "))
 
+while cantidad < 0:
+    print("La cantidad no puede ser negativa.")
+    cantidad = int(input("Ingrese la cantidad de números: "))
+
 for i in range(cantidad):
     lista.append(r.randint(1, 100)) #entonces
 

@@ -18,9 +18,23 @@ def mayor_unico(a, b, c):
     return -1
 
 
-a=int(input("Ingrese el primer número entero positivo: "))
-b=int(input("Ingrese el segundo número entero positivo: "))
-c=int(input("Ingrese el tercer número entero positivo: "))
+while True:
+    a = int(input("Ingrese el primer número entero positivo: "))
+    if a > 0:
+        break
+    print("El número debe ser positivo.")
+
+while True:
+    b = int(input("Ingrese el segundo número entero positivo: "))
+    if b > 0:
+        break
+    print("El número debe ser positivo.")
+
+while True:
+    c = int(input("Ingrese el tercer número entero positivo: "))
+    if c > 0:
+        break
+    print("El número debe ser positivo.")
 
 if mayor_unico(a, b, c) != -1:
     print("El mayor número único es:", mayor_unico(a, b, c))

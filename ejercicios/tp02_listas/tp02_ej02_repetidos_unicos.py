@@ -47,6 +47,10 @@ def elementos_unicos(lista):
 
 n = int(input("Ingrese la cantidad de números: "))
 
+while n < 0:
+    print("La cantidad no puede ser negativa.")
+    n = int(input("Ingrese la cantidad de números: "))
+
 lista = generar_lista(n)
 
 print("Lista original:")

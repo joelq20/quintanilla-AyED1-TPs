@@ -16,7 +16,15 @@ def load_pacientes(pacientes):
     afiliado = int(input("Ingrese número de afiliado (-1 para finalizar): "))
 
     while afiliado != -1:
+        while afiliado < 1000 or afiliado > 9999:
+            print("El número de afiliado debe tener 4 dígitos.")
+            afiliado = int(input("Ingrese número de afiliado (-1 para finalizar): "))
+
         tipo = int(input("Ingrese 0 para urgencia o 1 para turno: "))
+
+        while tipo != 0 and tipo != 1:
+            print("El tipo debe ser 0 para urgencia o 1 para turno.")
+            tipo = int(input("Ingrese 0 para urgencia o 1 para turno: "))
 
         pacientes.append([afiliado, tipo])
 
@@ -41,6 +49,10 @@ def search_afiliado(pacientes):
     afiliado = int(input("\nIngrese número de afiliado a buscar (-1 para finalizar): "))
 
     while afiliado != -1:
+        while afiliado < 1000 or afiliado > 9999:
+            print("El número de afiliado debe tener 4 dígitos.")
+            afiliado = int(input("\nIngrese número de afiliado a buscar (-1 para finalizar): "))
+
         # Reinicia los contadores para cada nuevo afiliado
         turnos = 0
         urgencias = 0
